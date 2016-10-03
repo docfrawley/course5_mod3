@@ -1,0 +1,12 @@
+<div class="row" ng-if="list.length===0">NOTHING FOUND!</div>
+
+<div class="row" ng-if="list.length>0"><table>
+  <th>Short Name</th><th>Name</th><th>Description</th><th>Remove</th>
+  <tr ng-repeat="item in list">
+    <td> {{ item.short_name }} </td><td> {{ item.name }} </td><td>  {{ item.description }}</td><td>
+      <button ng-click="onRemove({index: $index});" class="btn btn-sm btn-default">
+         Don't want this one!</button>
+    </td>
+  </tr>
+</table>
+</div>
